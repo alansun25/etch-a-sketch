@@ -47,7 +47,7 @@ clear.addEventListener('click', clearGrid);
 // creates a size-by-size grid
 function createGrid(size) {
     container.style.gridTemplateColumns = `repeat(${size}, auto)`;
-    for (i = 0; i < size**2; i++) {
+    for (let i = 0; i < size**2; i++) {
         let cell = document.createElement('div');
         cell.id = 'grid-item';
         container.appendChild(cell);
@@ -73,7 +73,7 @@ function createGrid(size) {
 
 function clearGrid() {
     isDrawing = false;
-    for (i = 0; i < gridItems.length; i++) {
+    for (let i = 0; i < gridItems.length; i++) {
         gridItems[i].style.backgroundColor = "transparent";
     }
 }
